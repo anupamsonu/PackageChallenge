@@ -2,12 +2,15 @@ package com.mobiquity.packer.algo;
 
 import com.mobiquity.packer.model.Item;
 import com.google.common.annotations.VisibleForTesting;
+import org.apache.log4j.Logger;
+
 import java.util.Arrays;
 
 public final class AllSubSetsSolution implements ISolution {
+    final static Logger log = Logger.getLogger(AllSubSetsSolution.class);
 
-    private Item[] totalItemsToPickFrom;
-    private double weightLimit;
+    final private Item[] totalItemsToPickFrom;
+    final private double weightLimit;
     private double maxCost = 0;
     private String itemsToPick = "-";
 
@@ -26,6 +29,7 @@ public final class AllSubSetsSolution implements ISolution {
      * @param weightLimit          Weight limit for the package
      */
     public AllSubSetsSolution(Item[] totalItemsToPickFrom, double weightLimit) {
+        log.info("Constructor:totalItemsToPickFrom: "+ Arrays.deepToString(totalItemsToPickFrom) + " weightLimit :"+weightLimit);
         this.totalItemsToPickFrom = totalItemsToPickFrom;
         this.weightLimit = weightLimit;
     }
@@ -36,18 +40,23 @@ public final class AllSubSetsSolution implements ISolution {
      * @return Final ouput for this solution
      */
     public String cherryPickItems() {
+        log.info("cherryPickItems :Entry ");
+
         findSubsets(null, -1);
+        log.info("cherryPickItems :Exit");
         return itemsToPick;
     }
 
     /**
      * Algorithm to find subsets recursively - start by adding first item,
      * evaluate costs and select items if constraints and conditions met.
-     * @param itemSubset
-     * @param newItemIndex
+     * @param itemSubset current subset
+     * @param newItemIndex index of item to be added
      */
     @VisibleForTesting
     void findSubsets(Item[] itemSubset, int newItemIndex) {
+        log.info("findSubsets :Entry : itemSubset : "+
+                Arrays.deepToString(itemSubset) + " newItemIndex: "+newItemIndex);
         if (newItemIndex == totalItemsToPickFrom.length)
             return;
         evaluateCurrentSubset(itemSubset);
@@ -56,6 +65,7 @@ public final class AllSubSetsSolution implements ISolution {
             findSubsets(itemSubset, i);
             itemSubset = eliminateItemFromSubsetEnd(itemSubset);
         }
+        log.info("findSubsets :Exit");
     }
 
     /**
@@ -63,10 +73,11 @@ public final class AllSubSetsSolution implements ISolution {
      * if total weight is within limit and the package cost is higher than the
      * previous package cost
      *
-     * @param itemsSubset items subset
+     * @param itemsSubset items subset being evaluated
      */
     @VisibleForTesting
     void evaluateCurrentSubset(Item[] itemsSubset) {
+        log.info("evaluateCurrentSubset :Entry :"+Arrays.deepToString(itemsSubset));
         if(itemsSubset == null) return;
         double subsetWeight = Arrays.stream(itemsSubset).reduce(0.0,
                 (runningWeight, item) -> runningWeight+item.getWeight(),
@@ -75,9 +86,11 @@ public final class AllSubSetsSolution implements ISolution {
         double runningCost = Arrays.stream(itemsSubset).reduce(0.0,
                 (addedCost, item) -> addedCost + item.getCost(), Double::sum);
         String itemIndexes = Arrays.stream(itemsSubset).reduce("",
-                (appendedIndex, item) -> appendedIndex.concat("," + (String.valueOf(item.getIndex()))), String::concat);
+                (appendedIndex, item) -> appendedIndex.concat("," +
+                        (String.valueOf(item.getIndex()))), String::concat);
 
         compareAndSetNewValues(runningCost, itemIndexes);
+        log.info("evaluateCurrentSubset :Exit");
     }
 
     /**
@@ -88,21 +101,24 @@ public final class AllSubSetsSolution implements ISolution {
      */
     @VisibleForTesting
     void compareAndSetNewValues(double currentCost, String index) {
+       log.info("compareAndSetNewValues :Entry :currentCost : "+currentCost + " : index :"+index);
        if (currentCost > this.maxCost) {
             this.itemsToPick = index;
             this.maxCost = currentCost;
         }
+        log.info("compareAndSetNewValues :Exit");
     }
 
     /**
      * Add the item and create a new array
-     * @param subset
-     * @param newItem
-     * @return
+     * @param subset  items subset being evaluated
+     * @param newItem new item to be added
+     * @return Item array after addition of new item
      */
     @VisibleForTesting
     Item[] addToSubset(Item[] subset, Item newItem) {
-        Item[]  newSubset = null;
+        log.info("addToSubset :Entry :subset : "+Arrays.deepToString(subset) + " : newItem :"+newItem);
+        Item[]  newSubset ;
         if (subset == null) {
             newSubset = new Item[]{newItem};
         }
@@ -111,20 +127,23 @@ public final class AllSubSetsSolution implements ISolution {
             System.arraycopy(subset, 0, newSubset, 0, subset.length);
             newSubset[subset.length] = newItem;
         }
+        log.info("addToSubset :Exit");
         return newSubset;
     }
 
     /**
      * Remove last element in order to form next subset of items
-     * @param subset
-     * @return
+     * @param subset items subset being evaluated
+     * @return items subset after removing last item
      */
     @VisibleForTesting
     Item[] eliminateItemFromSubsetEnd(Item[] subset) {
+        log.info("eliminateItemFromSubsetEnd :Entry :subset : "+Arrays.deepToString(subset));
         if (subset.length == 1)
             return null;
         Item[] newSubset = new Item[subset.length - 1];
         System.arraycopy(subset, 0, newSubset, 0, subset.length-1);
+        log.info("eliminateItemFromSubsetEnd :Exit");
         return newSubset;
     }
 }

@@ -500,3 +500,432 @@
 2021-03-08 18:25:10 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=90.72, cost=13.0, index=1}, Item{weight=33.8, cost=40.0, index=2}, Item{weight=43.15, cost=10.0, index=3}, Item{weight=37.97, cost=16.0, index=4}, Item{weight=46.81, cost=36.0, index=5}, Item{weight=48.77, cost=79.0, index=6}, Item{weight=81.8, cost=45.0, index=7}, Item{weight=19.36, cost=79.0, index=8}, Item{weight=6.76, cost=64.0, index=9}]
 2021-03-08 18:25:10 INFO  PackagingUtils:141 - getScale:Entry 56.0
 2021-03-08 18:25:10 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackagingUtils:108 - validateWeightLimit:Entry 8.0
+2021-03-08 19:26:25 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,5,€45) (2,2,€98) (3,3,€3) (4,2,€76) (5,3.00,€9) (6,4.00,€48)
+2021-03-08 19:26:25 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,5,€45) (2,2,€98) (3,3,€3) (4,2,€76) (5,3.00,€9) (6,4.00,€48)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,5,€45)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,2,€98)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,3,€3)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,2,€76)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,3.00,€9)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,4.00,€48)
+2021-03-08 19:26:25 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [Ljava.lang.String;@6e8dacdf
+2021-03-08 19:26:25 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,5,€45, 2,2,€98, 3,3,€3, 4,2,€76, 5,3.00,€9, 6,4.00,€48]
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €45
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 5.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €98
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 2.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €3
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 3.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €76
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 2.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €9
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 3.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €48
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 4.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=5.0, cost=45.0, index=1}, Item{weight=2.0, cost=98.0, index=2}, Item{weight=3.0, cost=3.0, index=3}, Item{weight=2.0, cost=76.0, index=4}, Item{weight=3.0, cost=9.0, index=5}, Item{weight=4.0, cost=48.0, index=6}]
+2021-03-08 19:26:25 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=2.0, cost=98.0, index=2}, Item{weight=2.0, cost=76.0, index=4}, Item{weight=3.0, cost=9.0, index=5}, Item{weight=3.0, cost=3.0, index=3}, Item{weight=4.0, cost=48.0, index=6}, Item{weight=5.0, cost=45.0, index=1}] :8.0
+2021-03-08 19:26:25 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 8.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 0
+2021-03-08 19:26:25 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =8.0 :6: 1
+2021-03-08 19:26:25 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:26:25 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm true
+2021-03-08 19:26:25 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:26:25 INFO  PackagingUtils:108 - validateWeightLimit:Entry 81.0
+2021-03-08 19:26:25 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
+2021-03-08 19:26:25 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,53.38,€45)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,88.62,€98)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,78.48,€3)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,72.30,€76)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,30.18,€9)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,46.34,€48)
+2021-03-08 19:26:25 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [Ljava.lang.String;@1e67b872
+2021-03-08 19:26:25 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,53.38,€45, 2,88.62,€98, 3,78.48,€3, 4,72.30,€76, 5,30.18,€9, 6,46.34,€48]
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €45
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 53.38
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €98
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 88.62
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €3
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 78.48
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €76
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 72.3
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €9
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 30.18
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €48
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 46.34
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=53.38, cost=45.0, index=1}, Item{weight=88.62, cost=98.0, index=2}, Item{weight=78.48, cost=3.0, index=3}, Item{weight=72.3, cost=76.0, index=4}, Item{weight=30.18, cost=9.0, index=5}, Item{weight=46.34, cost=48.0, index=6}]
+2021-03-08 19:26:25 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=30.18, cost=9.0, index=5}, Item{weight=46.34, cost=48.0, index=6}, Item{weight=53.38, cost=45.0, index=1}, Item{weight=72.3, cost=76.0, index=4}, Item{weight=78.48, cost=3.0, index=3}, Item{weight=88.62, cost=98.0, index=2}] :81.0
+2021-03-08 19:26:25 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 81.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 2
+2021-03-08 19:26:25 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =81.0 :6: 100
+2021-03-08 19:26:25 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:26:25 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:26:25 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:26:25 INFO  PackagingUtils:108 - validateWeightLimit:Entry 8.0
+2021-03-08 19:26:25 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,15.3,€34)
+2021-03-08 19:26:25 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,15.3,€34)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,15.3,€34)
+2021-03-08 19:26:25 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [Ljava.lang.String;@90f6bfd
+2021-03-08 19:26:25 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,15.3,€34]
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €34
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 15.3
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:26:25 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=15.3, cost=34.0, index=1}]
+2021-03-08 19:26:25 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=15.3, cost=34.0, index=1}] :8.0
+2021-03-08 19:26:25 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 8.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 1
+2021-03-08 19:26:25 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =8.0 :1: 10
+2021-03-08 19:26:25 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:26:25 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:26:25 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:26:25 INFO  PackagingUtils:108 - validateWeightLimit:Entry 75.0
+2021-03-08 19:26:25 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+2021-03-08 19:26:25 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,85.31,€29)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,14.55,€74)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,3.98,€16)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,26.24,€55)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,63.69,€52)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,76.25,€75)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (7,60.02,€74)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (8,93.18,€35)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (9,89.95,€78)
+2021-03-08 19:26:25 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [Ljava.lang.String;@15975490
+2021-03-08 19:26:25 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,85.31,€29, 2,14.55,€74, 3,3.98,€16, 4,26.24,€55, 5,63.69,€52, 6,76.25,€75, 7,60.02,€74, 8,93.18,€35, 9,89.95,€78]
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €29
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 85.31
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €74
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 14.55
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €16
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 3.98
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €55
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 26.24
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €52
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 63.69
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €75
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 76.25
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €74
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 60.02
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €35
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 93.18
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €78
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 89.95
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=85.31, cost=29.0, index=1}, Item{weight=14.55, cost=74.0, index=2}, Item{weight=3.98, cost=16.0, index=3}, Item{weight=26.24, cost=55.0, index=4}, Item{weight=63.69, cost=52.0, index=5}, Item{weight=76.25, cost=75.0, index=6}, Item{weight=60.02, cost=74.0, index=7}, Item{weight=93.18, cost=35.0, index=8}, Item{weight=89.95, cost=78.0, index=9}]
+2021-03-08 19:26:25 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=3.98, cost=16.0, index=3}, Item{weight=14.55, cost=74.0, index=2}, Item{weight=26.24, cost=55.0, index=4}, Item{weight=60.02, cost=74.0, index=7}, Item{weight=63.69, cost=52.0, index=5}, Item{weight=76.25, cost=75.0, index=6}, Item{weight=85.31, cost=29.0, index=1}, Item{weight=89.95, cost=78.0, index=9}, Item{weight=93.18, cost=35.0, index=8}] :75.0
+2021-03-08 19:26:25 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 75.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 2
+2021-03-08 19:26:25 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =75.0 :9: 100
+2021-03-08 19:26:25 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:26:25 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:26:25 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:26:25 INFO  PackagingUtils:108 - validateWeightLimit:Entry 56.0
+2021-03-08 19:26:25 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,90.72,€13) (2,33.80,€40) (3,43.15,€10) (4,37.97,€16) (5,46.81,€36) (6,48.77,€79) (7,81.80,€45) (8,19.36,€79) (9,6.76,€64)
+2021-03-08 19:26:25 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,90.72,€13) (2,33.80,€40) (3,43.15,€10) (4,37.97,€16) (5,46.81,€36) (6,48.77,€79) (7,81.80,€45) (8,19.36,€79) (9,6.76,€64)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,90.72,€13)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,33.80,€40)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,43.15,€10)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,37.97,€16)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,46.81,€36)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,48.77,€79)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (7,81.80,€45)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (8,19.36,€79)
+2021-03-08 19:26:25 INFO  PackagingUtils:39 - replaceBrackets:Entry (9,6.76,€64)
+2021-03-08 19:26:25 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [Ljava.lang.String;@1936f0f5
+2021-03-08 19:26:25 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,90.72,€13, 2,33.80,€40, 3,43.15,€10, 4,37.97,€16, 5,46.81,€36, 6,48.77,€79, 7,81.80,€45, 8,19.36,€79, 9,6.76,€64]
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €13
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 90.72
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €40
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 33.8
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €10
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 43.15
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €16
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 37.97
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €36
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 46.81
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €79
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 48.77
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €45
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 81.8
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €79
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 19.36
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €64
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 6.76
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:26:25 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=90.72, cost=13.0, index=1}, Item{weight=33.8, cost=40.0, index=2}, Item{weight=43.15, cost=10.0, index=3}, Item{weight=37.97, cost=16.0, index=4}, Item{weight=46.81, cost=36.0, index=5}, Item{weight=48.77, cost=79.0, index=6}, Item{weight=81.8, cost=45.0, index=7}, Item{weight=19.36, cost=79.0, index=8}, Item{weight=6.76, cost=64.0, index=9}]
+2021-03-08 19:26:25 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=6.76, cost=64.0, index=9}, Item{weight=19.36, cost=79.0, index=8}, Item{weight=33.8, cost=40.0, index=2}, Item{weight=37.97, cost=16.0, index=4}, Item{weight=43.15, cost=10.0, index=3}, Item{weight=46.81, cost=36.0, index=5}, Item{weight=48.77, cost=79.0, index=6}, Item{weight=81.8, cost=45.0, index=7}, Item{weight=90.72, cost=13.0, index=1}] :56.0
+2021-03-08 19:26:25 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:26:25 INFO  PackagingUtils:141 - getScale:Entry 56.0
+2021-03-08 19:26:25 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:26:25 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 2
+2021-03-08 19:26:25 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =56.0 :9: 100
+2021-03-08 19:26:25 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:26:25 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:26:25 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:52:42 INFO  Packer:33 - pack:Entry C:\Users\ZREHMAN\IdeaProjects\PackageChallenge\src\main\resources\example_input
+2021-03-08 19:52:42 INFO  Packer:72 - processAPackage:Entry : line8 : (1,5,€45) (2,2,€98) (3,3,€3) (4,2,€76) (5,3.00,€9) (6,4.00,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:108 - validateWeightLimit:Entry 8.0
+2021-03-08 19:52:42 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,5,€45) (2,2,€98) (3,3,€3) (4,2,€76) (5,3.00,€9) (6,4.00,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,5,€45) (2,2,€98) (3,3,€3) (4,2,€76) (5,3.00,€9) (6,4.00,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,5,€45)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,2,€98)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,3,€3)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,2,€76)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,3.00,€9)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,4.00,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [1,5,€45, 2,2,€98, 3,3,€3, 4,2,€76, 5,3.00,€9, 6,4.00,€48]
+2021-03-08 19:52:42 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,5,€45, 2,2,€98, 3,3,€3, 4,2,€76, 5,3.00,€9, 6,4.00,€48]
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €45
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 5.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €98
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 2.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €3
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 3.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €76
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 2.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €9
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 3.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €48
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 4.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=5.0, cost=45.0, index=1}, Item{weight=2.0, cost=98.0, index=2}, Item{weight=3.0, cost=3.0, index=3}, Item{weight=2.0, cost=76.0, index=4}, Item{weight=3.0, cost=9.0, index=5}, Item{weight=4.0, cost=48.0, index=6}]
+2021-03-08 19:52:42 DEBUG Packer:88 - processAPackage:After sorting [Item{weight=2.0, cost=98.0, index=2}, Item{weight=2.0, cost=76.0, index=4}, Item{weight=3.0, cost=9.0, index=5}, Item{weight=3.0, cost=3.0, index=3}, Item{weight=4.0, cost=48.0, index=6}, Item{weight=5.0, cost=45.0, index=1}]
+2021-03-08 19:52:42 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=2.0, cost=98.0, index=2}, Item{weight=2.0, cost=76.0, index=4}, Item{weight=3.0, cost=9.0, index=5}, Item{weight=3.0, cost=3.0, index=3}, Item{weight=4.0, cost=48.0, index=6}, Item{weight=5.0, cost=45.0, index=1}] :8.0
+2021-03-08 19:52:42 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 8.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 0
+2021-03-08 19:52:42 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =8.0 :6: 1
+2021-03-08 19:52:42 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:52:42 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm true
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:37 - Constructor:weightLimit:multiplyFactor 8.0 :1
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:51 - setTotalItemsToPickFrom:Entry:totalItemsToPickFrom =[Item{weight=2.0, cost=98.0, index=2}, Item{weight=2.0, cost=76.0, index=4}, Item{weight=3.0, cost=9.0, index=5}, Item{weight=3.0, cost=3.0, index=3}, Item{weight=4.0, cost=48.0, index=6}, Item{weight=5.0, cost=45.0, index=1}]
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:64 - setTotalItemsToPickFrom:Exit 
+2021-03-08 19:52:42 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:77 - cherryPickItems:Entry
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:101 - createMatrix:Entry:noOfItems:weightLimit =6: 8
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:116 - createMatrix:Exit
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:128 - backtrackToSelectItems:Entry
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:147 - backtrackToSelectItems:Exit : itemsToPick = 6,4,2
+2021-03-08 19:52:42 INFO  DynamicProgrammingSolution:84 - cherryPickItems:Exit:itemsToPick=6,4,2
+2021-03-08 19:52:42 INFO  Packer:91 - processAPackage:Return : chosenOnes6,4,2
+2021-03-08 19:52:42 INFO  Packer:72 - processAPackage:Entry : line81 : (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:108 - validateWeightLimit:Entry 81.0
+2021-03-08 19:52:42 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,53.38,€45) (2,88.62,€98) (3,78.48,€3) (4,72.30,€76) (5,30.18,€9) (6,46.34,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,53.38,€45)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,88.62,€98)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,78.48,€3)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,72.30,€76)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,30.18,€9)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,46.34,€48)
+2021-03-08 19:52:42 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [1,53.38,€45, 2,88.62,€98, 3,78.48,€3, 4,72.30,€76, 5,30.18,€9, 6,46.34,€48]
+2021-03-08 19:52:42 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,53.38,€45, 2,88.62,€98, 3,78.48,€3, 4,72.30,€76, 5,30.18,€9, 6,46.34,€48]
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €45
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 53.38
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €98
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 88.62
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €3
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 78.48
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €76
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 72.3
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €9
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 30.18
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €48
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 46.34
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=53.38, cost=45.0, index=1}, Item{weight=88.62, cost=98.0, index=2}, Item{weight=78.48, cost=3.0, index=3}, Item{weight=72.3, cost=76.0, index=4}, Item{weight=30.18, cost=9.0, index=5}, Item{weight=46.34, cost=48.0, index=6}]
+2021-03-08 19:52:42 DEBUG Packer:88 - processAPackage:After sorting [Item{weight=30.18, cost=9.0, index=5}, Item{weight=46.34, cost=48.0, index=6}, Item{weight=53.38, cost=45.0, index=1}, Item{weight=72.3, cost=76.0, index=4}, Item{weight=78.48, cost=3.0, index=3}, Item{weight=88.62, cost=98.0, index=2}]
+2021-03-08 19:52:42 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=30.18, cost=9.0, index=5}, Item{weight=46.34, cost=48.0, index=6}, Item{weight=53.38, cost=45.0, index=1}, Item{weight=72.3, cost=76.0, index=4}, Item{weight=78.48, cost=3.0, index=3}, Item{weight=88.62, cost=98.0, index=2}] :81.0
+2021-03-08 19:52:42 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 81.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 2
+2021-03-08 19:52:42 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =81.0 :6: 100
+2021-03-08 19:52:42 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:52:42 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:52:42 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:52:42 INFO  Packer:91 - processAPackage:Return : chosenOnes,4
+2021-03-08 19:52:42 INFO  Packer:72 - processAPackage:Entry : line8 : (1,15.3,€34)
+2021-03-08 19:52:42 INFO  PackagingUtils:108 - validateWeightLimit:Entry 8.0
+2021-03-08 19:52:42 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,15.3,€34)
+2021-03-08 19:52:42 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,15.3,€34)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,15.3,€34)
+2021-03-08 19:52:42 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [1,15.3,€34]
+2021-03-08 19:52:42 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,15.3,€34]
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €34
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 15.3
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:52:42 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=15.3, cost=34.0, index=1}]
+2021-03-08 19:52:42 DEBUG Packer:88 - processAPackage:After sorting [Item{weight=15.3, cost=34.0, index=1}]
+2021-03-08 19:52:42 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=15.3, cost=34.0, index=1}] :8.0
+2021-03-08 19:52:42 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 8.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 1
+2021-03-08 19:52:42 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =8.0 :1: 10
+2021-03-08 19:52:42 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:52:42 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:52:42 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:52:42 INFO  Packer:91 - processAPackage:Return : chosenOnes-
+2021-03-08 19:52:42 INFO  Packer:72 - processAPackage:Entry : line75 : (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+2021-03-08 19:52:42 INFO  PackagingUtils:108 - validateWeightLimit:Entry 75.0
+2021-03-08 19:52:42 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+2021-03-08 19:52:42 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,85.31,€29) (2,14.55,€74) (3,3.98,€16) (4,26.24,€55) (5,63.69,€52) (6,76.25,€75) (7,60.02,€74) (8,93.18,€35) (9,89.95,€78)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,85.31,€29)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,14.55,€74)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,3.98,€16)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,26.24,€55)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,63.69,€52)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,76.25,€75)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (7,60.02,€74)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (8,93.18,€35)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (9,89.95,€78)
+2021-03-08 19:52:42 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [1,85.31,€29, 2,14.55,€74, 3,3.98,€16, 4,26.24,€55, 5,63.69,€52, 6,76.25,€75, 7,60.02,€74, 8,93.18,€35, 9,89.95,€78]
+2021-03-08 19:52:42 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,85.31,€29, 2,14.55,€74, 3,3.98,€16, 4,26.24,€55, 5,63.69,€52, 6,76.25,€75, 7,60.02,€74, 8,93.18,€35, 9,89.95,€78]
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €29
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 85.31
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €74
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 14.55
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €16
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 3.98
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €55
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 26.24
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €52
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 63.69
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €75
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 76.25
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €74
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 60.02
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €35
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 93.18
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €78
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 89.95
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=85.31, cost=29.0, index=1}, Item{weight=14.55, cost=74.0, index=2}, Item{weight=3.98, cost=16.0, index=3}, Item{weight=26.24, cost=55.0, index=4}, Item{weight=63.69, cost=52.0, index=5}, Item{weight=76.25, cost=75.0, index=6}, Item{weight=60.02, cost=74.0, index=7}, Item{weight=93.18, cost=35.0, index=8}, Item{weight=89.95, cost=78.0, index=9}]
+2021-03-08 19:52:42 DEBUG Packer:88 - processAPackage:After sorting [Item{weight=3.98, cost=16.0, index=3}, Item{weight=14.55, cost=74.0, index=2}, Item{weight=26.24, cost=55.0, index=4}, Item{weight=60.02, cost=74.0, index=7}, Item{weight=63.69, cost=52.0, index=5}, Item{weight=76.25, cost=75.0, index=6}, Item{weight=85.31, cost=29.0, index=1}, Item{weight=89.95, cost=78.0, index=9}, Item{weight=93.18, cost=35.0, index=8}]
+2021-03-08 19:52:42 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=3.98, cost=16.0, index=3}, Item{weight=14.55, cost=74.0, index=2}, Item{weight=26.24, cost=55.0, index=4}, Item{weight=60.02, cost=74.0, index=7}, Item{weight=63.69, cost=52.0, index=5}, Item{weight=76.25, cost=75.0, index=6}, Item{weight=85.31, cost=29.0, index=1}, Item{weight=89.95, cost=78.0, index=9}, Item{weight=93.18, cost=35.0, index=8}] :75.0
+2021-03-08 19:52:42 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 75.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 2
+2021-03-08 19:52:42 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =75.0 :9: 100
+2021-03-08 19:52:42 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:52:42 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:52:42 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:52:42 INFO  Packer:91 - processAPackage:Return : chosenOnes,2,7
+2021-03-08 19:52:42 INFO  Packer:72 - processAPackage:Entry : line56 : (1,90.72,€13) (2,33.80,€40) (3,43.15,€10) (4,37.97,€16) (5,46.81,€36) (6,48.77,€79) (7,81.80,€45) (8,19.36,€79) (9,6.76,€64)
+2021-03-08 19:52:42 INFO  PackagingUtils:108 - validateWeightLimit:Entry 56.0
+2021-03-08 19:52:42 INFO  PackagingUtils:65 - createItemsFromLine:Entry  (1,90.72,€13) (2,33.80,€40) (3,43.15,€10) (4,37.97,€16) (5,46.81,€36) (6,48.77,€79) (7,81.80,€45) (8,19.36,€79) (9,6.76,€64)
+2021-03-08 19:52:42 INFO  PackagingUtils:23 - splitItemsListStrToItemsArray:Entry  (1,90.72,€13) (2,33.80,€40) (3,43.15,€10) (4,37.97,€16) (5,46.81,€36) (6,48.77,€79) (7,81.80,€45) (8,19.36,€79) (9,6.76,€64)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (1,90.72,€13)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (2,33.80,€40)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (3,43.15,€10)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (4,37.97,€16)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (5,46.81,€36)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (6,48.77,€79)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (7,81.80,€45)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (8,19.36,€79)
+2021-03-08 19:52:42 INFO  PackagingUtils:39 - replaceBrackets:Entry (9,6.76,€64)
+2021-03-08 19:52:42 INFO  PackagingUtils:28 - splitItemsListStrToItemsArray:Exit [1,90.72,€13, 2,33.80,€40, 3,43.15,€10, 4,37.97,€16, 5,46.81,€36, 6,48.77,€79, 7,81.80,€45, 8,19.36,€79, 9,6.76,€64]
+2021-03-08 19:52:42 INFO  PackagingUtils:126 - convertStringArrayToItemArray:Entry [1,90.72,€13, 2,33.80,€40, 3,43.15,€10, 4,37.97,€16, 5,46.81,€36, 6,48.77,€79, 7,81.80,€45, 8,19.36,€79, 9,6.76,€64]
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €13
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 90.72
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €40
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 33.8
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €10
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 43.15
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €16
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 37.97
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €36
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 46.81
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €79
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 48.77
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €45
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 81.8
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  1
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €79
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 19.36
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:53 - stripSymbolFromCost:Entry €64
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 6.76
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  2
+2021-03-08 19:52:42 INFO  PackagingUtils:80 - validateItems:Entry [Item{weight=90.72, cost=13.0, index=1}, Item{weight=33.8, cost=40.0, index=2}, Item{weight=43.15, cost=10.0, index=3}, Item{weight=37.97, cost=16.0, index=4}, Item{weight=46.81, cost=36.0, index=5}, Item{weight=48.77, cost=79.0, index=6}, Item{weight=81.8, cost=45.0, index=7}, Item{weight=19.36, cost=79.0, index=8}, Item{weight=6.76, cost=64.0, index=9}]
+2021-03-08 19:52:42 DEBUG Packer:88 - processAPackage:After sorting [Item{weight=6.76, cost=64.0, index=9}, Item{weight=19.36, cost=79.0, index=8}, Item{weight=33.8, cost=40.0, index=2}, Item{weight=37.97, cost=16.0, index=4}, Item{weight=43.15, cost=10.0, index=3}, Item{weight=46.81, cost=36.0, index=5}, Item{weight=48.77, cost=79.0, index=6}, Item{weight=81.8, cost=45.0, index=7}, Item{weight=90.72, cost=13.0, index=1}]
+2021-03-08 19:52:42 INFO  PackageCreator:31 - selectItemsForCurrentPackage:Entry:items:weightLimit [Item{weight=6.76, cost=64.0, index=9}, Item{weight=19.36, cost=79.0, index=8}, Item{weight=33.8, cost=40.0, index=2}, Item{weight=37.97, cost=16.0, index=4}, Item{weight=43.15, cost=10.0, index=3}, Item{weight=46.81, cost=36.0, index=5}, Item{weight=48.77, cost=79.0, index=6}, Item{weight=81.8, cost=45.0, index=7}, Item{weight=90.72, cost=13.0, index=1}] :56.0
+2021-03-08 19:52:42 INFO  PackageCreator:70 - evaluateMultiplyFactor:Entry 
+2021-03-08 19:52:42 INFO  PackagingUtils:141 - getScale:Entry 56.0
+2021-03-08 19:52:42 INFO  PackagingUtils:150 - getScale:Return  0
+2021-03-08 19:52:42 INFO  PackageCreator:77 - evaluateMultiplyFactor:Return:biggestScaleItems= 2
+2021-03-08 19:52:42 INFO  PackageCreator:55 - useDPAlgorithm:Entry:weightLimit : length : multiplyFactor =56.0 :9: 100
+2021-03-08 19:52:42 INFO  PackageCreator:58 - useDPAlgorithm:Entry:Return 
+2021-03-08 19:52:42 INFO  PackageCreator:35 - selectItemsForCurrentPackage:Entry:useDPAlgorithm false
+2021-03-08 19:52:42 INFO  PackageCreator:42 - selectItemsForCurrentPackage:Return:return cherryPickItems 
+2021-03-08 19:52:42 INFO  Packer:91 - processAPackage:Return : chosenOnes,9,8
+2021-03-08 19:52:42 INFO  Packer:58 - pack:Return : 6,4,2
+,4
+-
+,2,7
+,9,8
+

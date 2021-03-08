@@ -27,15 +27,20 @@ public class PackageCreator {
      * @return solution String for current package
      */
     public static String selectItemsForCurrentPackage(Item[] items, double weightLimit){
+
+        log.info("selectItemsForCurrentPackage:Entry:items: "+ Arrays.deepToString(items) + " weightLimit :"+weightLimit);
         int multiplyFactor = evaluateMultiplyFactor(items,weightLimit);
 
         boolean useDPAlgorithm = useDPAlgorithm(weightLimit, items.length, multiplyFactor);
+        log.info("selectItemsForCurrentPackage:Entry:useDPAlgorithm "+ useDPAlgorithm);
 
         ISolution solution;
         if(useDPAlgorithm)
             solution = new DynamicProgrammingSolution(items, weightLimit, multiplyFactor);
         else
             solution = new AllSubSetsSolution(items , weightLimit);
+        log.info("selectItemsForCurrentPackage:Return:cherryPickItems ");
+
         return solution.cherryPickItems();
     }
 
@@ -47,8 +52,10 @@ public class PackageCreator {
      * @return return the decision to use DP algorithm
      */
     public static boolean useDPAlgorithm(double weightLimit, int length, int multiplyFactor) {
+        log.info("useDPAlgorithm:Entry:weightLimit : "+weightLimit + " length :"+ length +" multiplyFactor: "+ multiplyFactor );
         double timeComplexityForDynamic = weightLimit * length * multiplyFactor;
         double timeComplexityForSubsets = Math.pow(2,length);
+        log.info("useDPAlgorithm:Entry:Return ");
         return !(timeComplexityForDynamic >= timeComplexityForSubsets);
     }
 
@@ -60,12 +67,14 @@ public class PackageCreator {
      * @return MULTIPLY_FACTOR multiply factor for weights in decimals
      */
     public static int evaluateMultiplyFactor(Item[] items, double weightLimit){
+        log.info("evaluateMultiplyFactor:Entry ");
         int initialScale = PackagingUtils.getScale(weightLimit);
         int biggestScaleItems = 0;
         Optional<Integer> biggestScaleItemsOpt = Arrays.stream(items).map(Item::getScale)
                                       .max(Integer::compareTo);
         if (biggestScaleItemsOpt.isPresent())
             biggestScaleItems = biggestScaleItemsOpt.get();
+        log.info("evaluateMultiplyFactor:Return:biggestScaleItems= "+biggestScaleItems);
         return (int)Math.pow(10,Math.max(initialScale, biggestScaleItems));
         }
 }

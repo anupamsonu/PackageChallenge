@@ -3,6 +3,7 @@ package com.mobiquity.packer;
 import com.mobiquity.PackagingUtils;
 import com.mobiquity.exception.APIException;
 import com.mobiquity.packer.model.Item;
+import org.apache.log4j.Logger;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -12,6 +13,7 @@ import java.util.Arrays;
 import java.util.concurrent.atomic.AtomicReference;
 
 public final class Packer {
+    final static Logger log = Logger.getLogger(Packer.class);
 
     private Packer() {
     }
@@ -25,16 +27,18 @@ public final class Packer {
      * by lines.
      * @param filePath Input file to process for packaging
      * @return Result : packages as a String
-     * @throws APIException
+     * @throws APIException if validation fails for the items
      */
     public static String pack(String filePath) throws APIException {
+        log.info("pack:Entry "+ filePath);
+
         AtomicReference<APIException> ex = new AtomicReference<>();
-        boolean validPackage = false;
+        boolean validPackage ;
         try (var stream = Files.lines(Paths.get(filePath), StandardCharsets.UTF_8)) {
             validPackage = stream.allMatch(line -> {
-                String packagedAsAString = null;
+                String packagedAsAString ;
                 try {
-                    packagedAsAString = processAPackage((String) line);
+                    packagedAsAString = processAPackage( line);
                 } catch (APIException e) {
                     ex.set(e);
                     return false;
@@ -43,9 +47,15 @@ public final class Packer {
                 return true;
             });
        } catch (IOException e) {
+            log.error("pack:Exception "+ e);
             throw new APIException("Exception during the file read", e);
         }
-        if (!validPackage) throw new APIException("Encountered exception in parsing line ->", ex.get());
+        if (!validPackage)
+        {
+            log.error("pack:Exception thrown ", ex.get());
+            throw new APIException("Encountered exception in parsing line ->", ex.get());
+        }
+        log.info("pack:Return : " + finalPackagesStr);
         return finalPackagesStr;
     }
 
@@ -56,13 +66,15 @@ public final class Packer {
      * @param line one line from each file that represents a package details
      *            - weight limit and items
      * @return a String that represents each processed package.
-     * @throws APIException
+     * @throws APIException Exception thrown on validation
      */
     public static String processAPackage(String line) throws APIException {
+        log.info("processAPackage:Entry : line" + line);
         double weightLimit;
         try {
             weightLimit = Double.parseDouble(PackagingUtils.beforeWeightLimitIndex.apply(line));
         } catch (NumberFormatException ex) {
+            log.error("processAPackage:Exception "+ ex);
             throw new APIException("Weight Limit is not a Number ", ex);
         }
         PackagingUtils.validateWeightLimit(weightLimit);
@@ -73,15 +85,17 @@ public final class Packer {
         PackagingUtils.validateItems(items);
 
         Arrays.sort(items);
+        log.debug("processAPackage:After sorting "+ Arrays.deepToString(items));
 
-        String chosenOnes = new PackageCreator().selectItemsForCurrentPackage(items, weightLimit);
+        String chosenOnes = PackageCreator.selectItemsForCurrentPackage(items, weightLimit);
+        log.info("processAPackage:Return : chosenOnes" + chosenOnes);
         return chosenOnes;
     }
 
     /**
      * Method used for testing only
-     * @param args
-     * @throws Exception
+     * @param args default
+     * @throws Exception default
      */
 
     public static void main(String[] args) throws Exception {

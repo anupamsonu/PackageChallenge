@@ -25,7 +25,7 @@ public class PackagingUtils {
         String[] str_array = Arrays.stream(pattern.split(itemArrayStr.trim()))
                 .map(s -> replaceBrackets(s))
                 .toArray(String[]::new);
-        log.info("splitItemsListStrToItemsArray:Exit "+ str_array);
+        log.info("splitItemsListStrToItemsArray:Exit "+ Arrays.deepToString(str_array));
         return str_array;
     }
 
