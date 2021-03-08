@@ -58,7 +58,7 @@ public final class Packer {
      * @return a String that represents each processed package.
      * @throws APIException
      */
-    private static String processAPackage(String line) throws APIException {
+    public static String processAPackage(String line) throws APIException {
         double weightLimit;
         try {
             weightLimit = Double.parseDouble(PackagingUtils.beforeWeightLimitIndex.apply(line));
@@ -74,7 +74,7 @@ public final class Packer {
 
         Arrays.sort(items);
 
-        String chosenOnes = new PackageCreator().selectTheItems(items, weightLimit);
+        String chosenOnes = new PackageCreator().selectItemsForCurrentPackage(items, weightLimit);
         return chosenOnes;
     }
 
